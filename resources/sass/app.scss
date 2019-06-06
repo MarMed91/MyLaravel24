@@ -1,0 +1,40 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+
+  background: red;
+  color: white;
+}
+
+.show {
+  margin: auto;
+}
+
+.card {
+  height: 600px;
+  width: 400px;
+  margin: auto;
+}
+
+footer{
+
+  background: black;
+  color: white;
+}
