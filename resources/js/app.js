@@ -73,7 +73,7 @@ function init() {
       return {
 
         deleted:false,
-        liked:false
+        liked:false // 1) mettiamo qui un liked, !)punti esenziali avere una variabile che possa cambiare
       }
     },
     props: {
@@ -94,7 +94,7 @@ function init() {
         //}
         //return sc;
       },
-      hearticon : function() {
+      hearticon : function() { //1) se è liked  mwttiamo fas altrimenti far 3) e poi avere una computed che in base al valore della variabile ci ritorna qualcosa di diverso o la classe per riempire l'icona o svuotarla
 
         //if (this.liked) {
 
@@ -104,24 +104,19 @@ function init() {
         //  return"far"
         //}
 
-        return x = this.liked ? "fas" : "far";
+        return x = this.liked ? "fas" : "far"; //condizione vera allora prendiamo prima parte se è falsa prendiamo seconda parte;
       },
-      postLikes: function() {
+      postLikes: function() { // dobbiamo avere una variabile prendere quel valore e invcrementarlo se l'utente mi ha likato eritornare indietro se l'utente mi dislika;
 
-        var tmpLikes = Number(this.likes) + (this.liked ? 1 : 0);
+        var tmpLikes = Number(this.likes) + (this.liked ? 1 : 0); //prendo numero di like e dico se me l'hai likato ti aggiungo uno altrimenti ti sommo zero;
 
-        if (this.liked) {
-
-          tmpLikes += 1;
-        }
-
-        return this.likes;
+        return tmpLikes;
       }
     },
     methods: {
       setLiked() {
 
-        this.liked = !this.liked;
+        this.liked = !this.liked; //2)Inverte il valore della variabile liked, se è falsa diventa vera e viceversa 2) avere una funzione che modifichi la variabile a cui associamo un evento in html;
       },
       destroy() {
 

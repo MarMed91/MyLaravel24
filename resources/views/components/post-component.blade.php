@@ -8,9 +8,9 @@
       <p class="card-content-text">@{{ content }}</p>
     </div>
     <div class="card-footer">
-      <div @click="setLiked()">
+      <div @click="setLiked()"> {{--aggiunto evento click e associato a questa funzione in JS--}}
         @{{ postLikes }}
-        <i class="fa-heart" v-bind:class="hearticon"></i>
+        <i class="fa-heart" v-bind:class="hearticon"></i> {{--permette di modificare icona cliccando dinamicamente--}}
       </div>
     </div>
   </div>
