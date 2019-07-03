@@ -103,7 +103,7 @@ function init() {
 
         //  return"far"
         //}
-
+                   //condizione    //in base al valore del dato io ti do il necessario per svuotare o riempire;
         return x = this.liked ? "fas" : "far"; //condizione vera allora prendiamo prima parte se è falsa prendiamo seconda parte;
       },
       postLikes: function() { // dobbiamo avere una variabile prendere quel valore e invcrementarlo se l'utente mi ha likato eritornare indietro se l'utente mi dislika;
